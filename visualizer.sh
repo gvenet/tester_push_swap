@@ -1,4 +1,3 @@
-make
 arg=10
 if (($# != 0)); then
 	unset arg
