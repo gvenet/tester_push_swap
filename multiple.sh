@@ -4,12 +4,12 @@ while TRUE; do
 	i=0
 	while ((i<10));do
 		ARG=$(<"results/$i"_in)
-		 echo
-		 echo $ARG
-		./bin/push_swap $ARG >a
+		#  echo
+		#  echo $ARG
+		./push_swap $ARG >a
 		# cat a
 		# echo
-		cat a | ./bin/checker $ARG
+		cat a | ./checker $ARG
 		cat -b a | wc -l | xargs
  		((i+=1))
 		rm a
