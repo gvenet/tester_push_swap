@@ -14,7 +14,7 @@ dir_name = 'results'
 def get_score(start, stop, n):
 	result = r.sample(list(range(start, stop)), n)
 	result = [str(n) for n in result]
-	proc = subprocess.Popen(['./bin/push_swap'] + result, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	proc = subprocess.Popen(['./push_swap'] + result, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	out, err = proc.communicate()
 	out = out.decode("utf-8")
 	return len(out.split('\n')) - 1, result, out

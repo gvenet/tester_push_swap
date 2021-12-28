@@ -1,4 +1,3 @@
-make
 while TRUE; do
 	python3.8 run_multiple.py $1;
 	i=0
